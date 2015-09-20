@@ -1,4 +1,4 @@
-var numeric = require('./..	/node_modules/numeric-1.2.6.js');
+var numeric = require('./../node_modules/numeric-1.2.6.js');
 
 function lqr() {
 
