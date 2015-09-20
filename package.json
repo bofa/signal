@@ -1,6 +1,6 @@
 {
   "name": "signal-processing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Javascript lib built on top of numeric for signal processsing, filtering and control theory.",
   "main": "index.js",
   "scripts": {
