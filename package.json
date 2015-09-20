@@ -1,5 +1,5 @@
 {
-  "name": "signal",
+  "name": "signal-processing",
   "version": "0.0.1",
   "description": "Javascript lib built on top of numeric for signal processsing, filtering and control theory.",
   "main": "index.js",
