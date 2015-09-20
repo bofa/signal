@@ -1,4 +1,4 @@
-var numeric = require('./../node_modules/numeric-1.2.6.js');
+// var numeric = require('./../node_modules/numeric-1.2.6.js');
 
 /*
 // Example values for the control system.
@@ -38,7 +38,7 @@ var L = lqr(A,B,Q,R,10);
 A,B is the discrete dynamics for the system.
 Q,R is the state and control signal penalty.
 */
-function lqr(A,B,Q,R,iterations) {
+module.exports = function lqr(A,B,Q,R,iterations) {
   
   // Default 1000 iterations
   iterations = typeof iterations !== 'undefined' ? a : 1000;

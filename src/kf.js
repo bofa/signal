@@ -1,4 +1,4 @@
-var numeric = require('./../node_modules/numeric-1.2.6.js');
+// var numeric = require('./../node_modules/numeric-1.2.6.js');
 
 function ekf(T, x0, P0, A, B, C, Q, R) {	
 	
@@ -105,7 +105,7 @@ function ekf(T, x0, P0, A, B, C, Q, R) {
 		};
 		*/
 		
-		measurementUpdate : function (y, state){
+		measurementUpdate : function (y, state) {
 			
 			var dot = numeric.dot;
 			var trans = numeric.transpose;
@@ -119,14 +119,11 @@ function ekf(T, x0, P0, A, B, C, Q, R) {
 			var S = add( dot( state.C, dot( state.P, CT ) ), state.R );
 			var K = dot( state.P, dot( CT, inv(S) ) );
 			
-			x = add( state.x, dot(K, eps) );
-			P = sub( state.P, dot( K, dot( state.C, state.P) ) );
-			
-			this.x = x;
-			this.P = P;
+			this.x = add( state.x, dot(K, eps) );
+			this.P = sub( state.P, dot( K, dot( state.C, state.P) ) );
 			
 			return this;
-		};
+		}
 		
 	}
 }

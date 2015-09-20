@@ -1,3 +1,5 @@
-require('gradientControl.js');
-require('src/kf.js');
-require('lqr.js');
+var gradient = require('./src/gradientControl.js');
+var kf = require('./src/kf.js');
+var lqr = require('./src/lqr.js');
+
+module.exports = 'ENTRY';

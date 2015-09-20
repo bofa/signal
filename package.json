@@ -20,6 +20,7 @@
     "numeric": "^1.2.6"
   },
   "devDependencies": {
+    "gulp": "^3.9.0",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.9",
     "karma-chrome-launcher": "^0.2.0",
