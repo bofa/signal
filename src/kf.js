@@ -31,6 +31,7 @@ function ekf() {
 	
 	ukf.X = [[]];
 	
+	/*
 	// Simulation
 	var time = 0
 	var f = 2*Math.PI*0.02*Math.random();
@@ -60,41 +61,8 @@ function ekf() {
 		battery -= 0.4 + 0.4*Math.sin(f*time) + 0.3*Math.random();
 		y[0][0] = battery + 3.0*(Math.random()-0.5);
 		valuesMeasurements.push({x: time, y: y[0][0]});
-	
 	}
-	
-	console.log(values);
-	
-	drawGraph();
-		
-	function drawGraph() {
-		var chart;
-	
-		nv.addGraph(function() {
-			chart = nv.models.lineChart()
-				.options({
-					transitionDuration: 0,
-					useInteractiveGuideline: true
-				})
-			;
-			// chart sub-models (ie. xAxis, yAxis, etc) when accessed directly, return themselves, not the parent chart, so need to chain separately
-			chart.xAxis
-				.axisLabel("Time (s)")
-				.tickFormat(d3.format(',.1f'))
-				.staggerLabels(true)
-			;
-			chart.yAxis
-				.axisLabel('Voltage (v)')
-				.tickFormat(d3.format(',.2f'))
-			;
-			d3.select('#chart1').append('svg')
-				.datum(grapData)
-				//.datum([{x:1,y:1},{x:2,y:2}])
-				.call(chart);
-			nv.utils.windowResize(chart.update);
-			return chart;
-		});
-	};
+	*/
 	
 	function timeUpdate(state){
 	
