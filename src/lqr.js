@@ -2,6 +2,14 @@
 
 /*
 // Example values for the control system.
+
+var add = numeric.add;
+var trans = numeric.transpose;
+var inv = numeric.inv;
+var mult = numeric.dot;
+var sub = numeric.sub;
+var diag = numeric.diag;
+
 var M = 50;
 var r = 0.1;
 var I = 1/3*M*r*r;
@@ -41,7 +49,7 @@ Q,R is the state and control signal penalty.
 module.exports = function lqr(A,B,Q,R,iterations) {
   
   // Default 1000 iterations
-  iterations = typeof iterations !== 'undefined' ? a : 1000;
+  iterations = typeof iterations !== 'undefined' ? iterations : 1000;
 
   var add = numeric.add;
   var trans = numeric.transpose;
@@ -78,7 +86,7 @@ module.exports = function lqr(A,B,Q,R,iterations) {
   // Init P to Q
   var P = numeric.clone(Q);
   
-  for(var i=0; i<10000; ++i){
+  for(var i=0; i<iterations; ++i){
     P = interateP(P,A,B,R,Q);  
   }
   
